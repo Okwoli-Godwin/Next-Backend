@@ -36,7 +36,7 @@ const Message = (req, res) => __awaiter(void 0, void 0, void 0, function* () {
     catch (error) {
         return res.status(400).json({
             message: "failed to send email",
-            data: error
+            data: error.message
         });
     }
 });

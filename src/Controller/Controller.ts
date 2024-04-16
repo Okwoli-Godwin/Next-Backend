@@ -30,10 +30,10 @@ export const Message = async (req: Request, res: Response): Promise<Response> =>
             message: "check your email for verification",
             data: {createData}
         })
-    } catch (error) {
+    } catch (error: any) {
         return res.status(400).json({
             message: "failed to send email",
-            data: error
+            data: error.message
         })
     }
 }
